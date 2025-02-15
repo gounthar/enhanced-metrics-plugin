@@ -1,7 +1,8 @@
 package io.jenkins.plugins.metrics.enhanced.job;
 
 import com.cloudbees.hudson.plugins.folder.Folder;
-import hudson.model.*;
+import hudson.model.Item;
+import hudson.model.Job;
 import io.jenkins.plugins.metrics.enhanced.EnhancedMetrics;
 import io.jenkins.plugins.metrics.enhanced.generic.label.AbstractGenericMetric;
 import io.jenkins.plugins.metrics.enhanced.generic.label.GenericMetric;
@@ -10,7 +11,10 @@ import jenkins.branch.MultiBranchProject;
 import jenkins.model.Jenkins;
 import org.jenkinsci.plugins.workflow.job.WorkflowJob;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 

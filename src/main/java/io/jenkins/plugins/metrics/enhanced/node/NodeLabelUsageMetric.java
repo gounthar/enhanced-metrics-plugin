@@ -1,7 +1,9 @@
 package io.jenkins.plugins.metrics.enhanced.node;
 
 import hudson.Extension;
-import hudson.model.*;
+import hudson.model.Executor;
+import hudson.model.ExecutorListener;
+import hudson.model.Queue;
 import hudson.model.Queue;
 import io.jenkins.plugins.metrics.enhanced.EnhancedMetrics;
 import io.jenkins.plugins.metrics.enhanced.generic.label.AbstractGenericMetric;
