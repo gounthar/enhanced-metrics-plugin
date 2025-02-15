@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.jenkins-ci.plugins</groupId>
         <artifactId>plugin</artifactId>
-        <version>4.40</version>
+        <version>5.7</version>
         <relativePath />
     </parent>
     <groupId>io.jenkins.plugins</groupId>
@@ -16,7 +16,7 @@
     <description>Enables detailed metrics for Jobs/Nodes/Users</description>
     <url>https://github.com/jenkinsci/enhanced-metrics-plugin</url>
     <scm>
-        <connection>scm:git:ssh://github.com/jenkinsci/enhanced-metrics-plugin.git</connection>
+        <connection>scm:git:https://github.com/jenkinsci/enhanced-metrics-plugin.git</connection>
         <developerConnection>scm:git:ssh://git@github.com/jenkinsci/enhanced-metrics-plugin.git</developerConnection>
         <url>https://github.com/jenkinsci/enhanced-metrics-plugin</url>
         <tag>HEAD</tag>
@@ -27,28 +27,19 @@
             <url>http://opensource.org/licenses/MIT</url>
         </license>
     </licenses>
-    <developers>
-        <developer>
-            <id>aytuncbeken</id>
-            <name>Aytunc BEKEN</name>
-            <email>aytuncbeken.ab@gmail.com</email>
-        </developer>
-    </developers>
 
     <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
-        <java.level>8</java.level>
-        <java.version>1.8</java.version>
-        <jenkins.version>2.332.2</jenkins.version>
+        <!-- https://www.jenkins.io/doc/developer/plugin-development/choosing-jenkins-baseline/ -->
+        <jenkins.baseline>2.479</jenkins.baseline>
+        <jenkins.version>${jenkins.baseline}.1</jenkins.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>io.jenkins.tools.bom</groupId>
-                <artifactId>bom-2.332.x</artifactId>
-                <version>1438.v6a_2c29d73f82</version>
+                <artifactId>bom-${jenkins.baseline}.x</artifactId>
+                <version>4136.vca_c3202a_7fd1</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -72,7 +63,6 @@
         <dependency>
             <groupId>org.jenkins-ci.plugins</groupId>
             <artifactId>prometheus</artifactId>
-            <version>2.0.8</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
